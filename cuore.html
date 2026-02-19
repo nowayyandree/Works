@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>BUBINA MIA🤍</title>
+<style>
+body {
+    background: #ff0066;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.cuore {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    transform: rotate(-45deg);
+    animation: battito 2s infinite;
+}
+
+.cuore::before,
+.cuore::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.cuore::before {
+    top: -100px;
+    left: 0;
+}
+
+.cuore::after {
+    left: 100px;
+    top: 0;
+}
+
+@keyframes battito {
+    0% { transform: rotate(-45deg) scale(1); }
+    25% { transform: rotate(-45deg) scale(1.5); }
+    50% { transform: rotate(-45deg) scale(1); }
+    75% { transform: rotate(-45deg) scale(1.5); }
+    100% { transform: rotate(-45deg) scale(1); }
+}
+
+</style>
+</head>
+<body>
+<div class= "cuore"></div>
+</body>
+</html>
